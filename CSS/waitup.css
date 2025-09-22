@@ -1,0 +1,109 @@
+/* === Fluid text sizing – keeps the base design intact === */
+
+/* Main heading */
+.faq-slide6 h1 {
+  /* ~24 px on small phones, up to ~48 px on big desktops */
+  font-size: clamp(1.5rem, 2.5vw + 1rem, 3rem) !important;
+  /* slight letter-spacing scale */
+  letter-spacing: clamp(2px, 0.5vw, 6px) !important;
+}
+
+/* Question text */
+.faq-slide6 h3 {
+  /* ~16 px → ~22 px */
+  font-size: clamp(1rem, 1.2vw + 0.6rem, 1.375rem) !important;
+  letter-spacing: clamp(1px, 0.3vw, 2px);
+}
+
+/* Answer paragraphs */
+.faq-slide6 .faq-box-answer p {
+  /* ~14 px → ~18 px */
+  font-size: clamp(0.875rem, 0.9vw + 0.5rem, 1.125rem) !important;
+  line-height: clamp(1.2rem, 1.4vw, 1.6rem);
+}
+
+/* Legend list items */
+.Colors-legend li {
+  font-size: clamp(0.9rem, 0.9vw + 0.4rem, 1.125rem) !important;
+  letter-spacing: clamp(0.5px, 0.25vw, 1px);
+}
+
+/* Optional: keep container margins from feeling cramped on phones */
+.faq-slide6 .container {
+  margin-left: clamp(4vw, 8vw, 10vw);
+  margin-right: clamp(4vw, 8vw, 10vw);
+}
+
+/* Mobile fix (≤600px) */
+@media (max-width: 600px) {
+  .faq-slide6 {
+    padding-top: 80px !important;   /* pushes the whole section lower */
+  }
+
+  .faq-slide6 h1 {
+    font-size: 1.6rem !important;   /* slightly smaller heading */
+    margin-bottom: 20px !important;
+  }
+
+  .faq-slide6 .faq-box {
+    width: 90% !important;          /* use more width on small screens */
+  }
+
+  .faq-slide6 h3 {
+    font-size: 1rem !important;     /* shrink question text */
+  }
+
+  .faq-slide6 .faq-box-answer p {
+    font-size: 0.9rem !important;   /* shrink answer text */
+    line-height: 1.4 !important;
+  }
+}
+
+/* Tablet viewport (769px → 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .faq-slide6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: auto;
+    padding: 50px;
+    width: 200vh;
+    box-sizing: border-box;
+    margin-left: -220px;
+  }
+
+  .faq-slide6 h1 {
+    font-size: 2rem !important;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .faq-slide6 .faq-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    max-height: auto;
+  }
+
+  .faq-slide6 .faq-box {
+    width: 90%;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .faq-slide6 h3 {
+    font-size: 1rem !important;
+  }
+
+  .faq-slide6 .faq-box-answer p {
+    font-size: 1rem !important;
+    line-height: 1.5;
+  }
+}
